@@ -1,0 +1,12 @@
+----------------------------------------------------------------------------------
+Benchmark                                        Time             CPU   Iterations
+----------------------------------------------------------------------------------
+BM_GenerateRandomUniform20/iterations:1      10812 ms        10811 ms            1
+BM_GenerateRandomUniform25/iterations:1      14061 ms        14061 ms            1
+BM_GenerateRandomUniform30/iterations:1      17346 ms        17345 ms            1
+BM_GenerateRandomUniform35/iterations:1      20618 ms        20618 ms            1
+BM_GenerateRandomUniform40/iterations:1      23892 ms        23892 ms            1
+BM_GenerateRandomUniform45/iterations:1      25665 ms        25665 ms            1
+BM_GenerateRandomUniform50/iterations:1      28925 ms        28925 ms            1
+BM_GenerateRandomUniform55/iterations:1      32195 ms        32195 ms            1
+BM_GenerateRandomUniform60/iterations:1      35467 ms        35467 ms            1

@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------------
+Benchmark                                       Time             CPU   Iterations
+---------------------------------------------------------------------------------
+BM_GenerateSwappingAll1                      33.8 ns         33.8 ns     20664998
+BM_GenerateSwappingAll2                      50.9 ns         50.9 ns     13762006
+BM_GenerateSwappingAll3                      90.4 ns         90.4 ns      7730273
+BM_GenerateSwappingAll4                       218 ns          218 ns      3216736
+BM_GenerateSwappingAll5                       655 ns          655 ns      1070316
+BM_GenerateSwappingAll6                      2006 ns         2006 ns       348999
+BM_GenerateSwappingAll7                      6497 ns         6497 ns       107826
+BM_GenerateSwappingAll8                     79019 ns        79016 ns         8861
+BM_GenerateSwappingAll9                    269809 ns       269802 ns         2595
+BM_GenerateSwappingAll10                   936463 ns       936430 ns          750
+BM_GenerateSwappingAll11                  3294749 ns      3294664 ns          213
+BM_GenerateSwappingAll12/iterations:50   13208714 ns     13207658 ns           50
+BM_GenerateSwappingAll13/iterations:50   49075108 ns     49072521 ns           50
+BM_GenerateSwappingAll14/iterations:50  178618040 ns    178608855 ns           50
+BM_GenerateSwappingAll15/iterations:50  660144672 ns    660137771 ns           50
+BM_GenerateSwappingAll16/iterations:50 2351823807 ns   2351827286 ns           50

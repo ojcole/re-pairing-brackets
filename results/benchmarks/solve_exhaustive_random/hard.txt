@@ -1,0 +1,12 @@
+--------------------------------------------------------------------------------------
+Benchmark                                            Time             CPU   Iterations
+--------------------------------------------------------------------------------------
+BM_SolveExhaustiveRandomHard20/iterations:1       1662 ms         1662 ms            1
+BM_SolveExhaustiveRandomHard24/iterations:1       3523 ms         3523 ms            1
+BM_SolveExhaustiveRandomHard30/iterations:1       8806 ms         8806 ms            1
+BM_SolveExhaustiveRandomHard34/iterations:1      15014 ms        15014 ms            1
+BM_SolveExhaustiveRandomHard40/iterations:1      30260 ms        30261 ms            1
+BM_SolveExhaustiveRandomHard44/iterations:1      45777 ms        45777 ms            1
+BM_SolveExhaustiveRandomHard50/iterations:1      79723 ms        79724 ms            1
+BM_SolveExhaustiveRandomHard54/iterations:1     110339 ms       110340 ms            1
+BM_SolveExhaustiveRandomHard60/iterations:1     170349 ms       170350 ms            1

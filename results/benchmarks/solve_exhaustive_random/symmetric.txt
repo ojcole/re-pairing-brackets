@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------------------
+Benchmark                                                 Time             CPU   Iterations
+-------------------------------------------------------------------------------------------
+BM_SolveExhaustiveRandomSymmetric20/iterations:1        689 ms          689 ms            1
+BM_SolveExhaustiveRandomSymmetric25/iterations:1       1217 ms         1217 ms            1
+BM_SolveExhaustiveRandomSymmetric30/iterations:1       2209 ms         2209 ms            1
+BM_SolveExhaustiveRandomSymmetric35/iterations:1       3688 ms         3688 ms            1
+BM_SolveExhaustiveRandomSymmetric40/iterations:1       6566 ms         6566 ms            1
+BM_SolveExhaustiveRandomSymmetric45/iterations:1      11196 ms        11196 ms            1
+BM_SolveExhaustiveRandomSymmetric50/iterations:1      20937 ms        20937 ms            1
+BM_SolveExhaustiveRandomSymmetric55/iterations:1      38612 ms        38612 ms            1
+BM_SolveExhaustiveRandomSymmetric60/iterations:1      68488 ms        68488 ms            1

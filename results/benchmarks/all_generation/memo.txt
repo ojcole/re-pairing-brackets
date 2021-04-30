@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Benchmark                                     Time             CPU   Iterations
+-------------------------------------------------------------------------------
+BM_GenerateMemoedAll1                      82.7 ns         82.7 ns      8403153
+BM_GenerateMemoedAll2                       261 ns          261 ns      2685468
+BM_GenerateMemoedAll3                       617 ns          617 ns      1133921
+BM_GenerateMemoedAll4                      1411 ns         1411 ns       496289
+BM_GenerateMemoedAll5                      3252 ns         3252 ns       214780
+BM_GenerateMemoedAll6                      8432 ns         8432 ns        83021
+BM_GenerateMemoedAll7                     27066 ns        27066 ns        25846
+BM_GenerateMemoedAll8                    138667 ns       138668 ns         5047
+BM_GenerateMemoedAll9                    537073 ns       537072 ns         1295
+BM_GenerateMemoedAll10                  1896724 ns      1896724 ns          369
+BM_GenerateMemoedAll11                  7025740 ns      7025734 ns           99
+BM_GenerateMemoedAll12/iterations:50   27333746 ns     27333814 ns           50
+BM_GenerateMemoedAll13/iterations:50  104738655 ns    104737446 ns           50
+BM_GenerateMemoedAll14/iterations:50  395814047 ns    395810507 ns           50
+BM_GenerateMemoedAll15/iterations:50 1480634570 ns   1480621036 ns           50
+BM_GenerateMemoedAll16/iterations:50 5452958393 ns   5452894655 ns           50

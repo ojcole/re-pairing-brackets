@@ -1,0 +1,217 @@
+- Greedy means can prune if search of word goes above width
+- Words whose greedy approach generates widths less than the current maximum can be pruned
+- Order by greedy descending
+- Words of length n + 1 must have max width > words of length n simple to show by nature of no repairing between outer components
+- Generate from bottom up
+
+Theorem 1: A matching interrupts the balance of a dyck word iff the first and last parentheses are in different components.
+
+We define a component as separations in points when the depth is 0.
+Treating whole dyck words S of the form (.W.) where W is an arbitrary dyck word as trees.
+We can now think of an arbitrary dyck word as concatenations of S.
+As each S can be thought of as a tree, the overall W can be viewed as a forest of trees.
+
+To abide by the summation rule, at every point in time throughout the repairing, at every point of the word, the sum must be >= 0.
+This treats ( as +1 and ) as -1.
+
+<=
+
+Assume we can make such a repairing without property breaking. By considering the arbitrary interesting dyck word.
+
+S* . S . S* . S . S*
+
+Expanding gives
+
+S* .1 (W1) .2 S* .3 (W2) .4 S*
+
+At positions 1, 2, 3, 4 by definition of the component property the summation is 0.
+Taking a ( in W1 and matching it with a ) in W2 causes a +1 to disappear in W1, this causes a -1 modifier to 2.
+As position 2 = -1, this is a contradiction.
+
+=>
+
+A matching has interrupted the balanced => at the last step, at position i, the summation < 0.
+
+Assume the last move occurred within the same component.
+
+Before the matching, the summation at the beginning and end of component was 0.
+
+Let j be the index of the opening bracket and k be the index of the closing bracket such that j < k.
+
+At time t - 1, the sum up to j through k - 1 > 0 as they are within a component. At time t, the sum up to j through k - 1 >= 0 so not breaking rules as a +1 is removed.
+At time t - 1, the sum up to k through n-1 >= 0. At time t, the sum up to k through n-1 > 0.
+
+By contradiction, the matching being imbalanced implies.
+
+QED
+
+
+Theorem 2: The maximal minimum width of a word of length n >= the maximal minimum width of a word of length n-1.
+
+Proof:
+
+Consider the word W . (). W is considered to be the maximal minimum width of words of length n-1.
+Let k denote the minimum width of W.
+By Theorem 1, no repairings can occur between components.
+This means that the minimal width of repairing W is still k.
+
+The following repairing strategy gives an optimal width.
+Pair of the final ().
+Optimally pair off W.
+
+This yields a minimum width of k. Therefore, as there exists a word of length n whose minimum width is = the maximal length of words of length n.
+The maximal minimum width of words of length n >= k.
+
+QED.
+
+Theorem 3:
+
+All dyck words with an approximated width of 2 cannot have a width of 1.
+
+Proof:
+
+Observation. For a dyck word to have a width of 1, it must have a width of one at all stages of the repairing.
+This allows for three moves:
+
+()sigma -> sigma
+(sigma) -> sigma
+sigma() -> sigma
+
+w.l.o.g, assume |sigma| > 2
+
+It is clear that the first and last cases are covered by the algorithm.
+In the first case, the second algorithm checks if the first component, in this case () has lower or equal width to the last component and if it does to make the first move.
+If the first component = (), then it cannot have a greater width than the final component so this move is always made.
+
+In the last case, the first algorithm shows the mirror. It can also be shown recursively using the first algorithm. The only case where the last of sigma() is greater than or equal to the first component is when the first component is (). This will choose the first move, continually until the first component is not (). In which case the condition holds and the last move is made.
+
+The middle case can be shown recursively to be made. It has already been shown that the first two moves will be made if on offer. This results in two cases, sigma = sigma'sigma'' or sigma = sigma', where sigma' is a dyck prime.
+
+Lemma:
+
+A word of the form sigma = sigma'sigma'' where |sigma'|, |sigma''| > 2 and () is not in sigma'' cannot have width = 1.
+
+Proof:
+
+To maintain a width of 1, by the observation above, only those moves can be taken. However, none of those moves can be taken so by contradiction the width must be > 1.
+
+QED.
+
+
+By the lemma it is clear to see that only the second case can result in a width of 1. In the second algorithm, this case is handled explicitly with the move being made.
+
+As the approximation algorithm only makes these moves when on offer, it is clear that it must generate a width of 1 if it is possible and therefore if it generates a width of 2 it must also be optimal.
+
+QED
+
+https://arxiv.org/pdf/1002.2625.pdf
+
+
+
+
+=====================
+Strats
+=====================
+
+Derived Strategy
+
+Step 1: Make any obvious moves
+
+Step 2: If any free moves; moves of the form
+
+...(_)...
+
+or
+
+...()_
+
+or 
+
+_()...
+
+Exist, make one move and go back to step 1, otherwise keep going
+
+Step 3: Check if using currency will increase the width (is there already an open section that can be used)
+
+If not, if on the left side, pair the last "()"
+        if on the right side, pair the first "()"
+
+To create an open section
+
+Use 1 currency to pair off
+
+Go back to step 1
+
+========
+========
+========
+========
+========
+========
+========
+========
+
+
+Derived strategy for restricted single component
+
+Step 1:
+
+Check if has repairing of width 1
+If so, just return it
+
+
+Step 2:
+
+If left leaning choose the deepest final ()
+If right leaning choose the deepest first ()
+
+
+Step 3: 
+
+Apply all free moves
+Check if multiple components, if so return multi component strategy result
+
+
+Step 4:
+
+If a currency is usable for free, use it and go to step 3
+To use a currency, take the rightmost viable opening bracket and leftmost viable closing bracket for left
+Vice versa for right
+Pair them off
+Otherwise go to step 2
+
+
+========
+
+Multi Component Strategy
+
+Step 1: Make obvious moves
+Step 2:
+
+Case 1:
+
+Remaining is d1.di.dn
+
+d1 = (d1')
+dn = (dn')
+
+Calculate d1 width using derived strategy left leaning
+Calculate d1 width using derived strategy right leaning
+
+Calculate dn width using derived strategy left leaning
+Calculate dn width using derived strategy right leaning
+
+If d1_left < duy
+Repair the smaller of the two first
+Cache the other one
+Call the multi component strategy with the new string
+
+
+Case 2:
+
+Remaining d1 . _* . di or di . _* . dn
+
+Calcuate di width using call to multi component strategy
+Calcuate d1/dn width using call to left and right strategy (take better)
+
+Pair off minimum first, then other

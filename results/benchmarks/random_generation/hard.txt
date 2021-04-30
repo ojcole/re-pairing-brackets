@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Benchmark                                     Time             CPU   Iterations
+-------------------------------------------------------------------------------
+BM_GenerateRandomHard20/iterations:1        869 ms          869 ms            1
+BM_GenerateRandomHard24/iterations:1       1201 ms         1201 ms            1
+BM_GenerateRandomHard30/iterations:1       1551 ms         1551 ms            1
+BM_GenerateRandomHard34/iterations:1       1886 ms         1886 ms            1
+BM_GenerateRandomHard40/iterations:1       2231 ms         2231 ms            1
+BM_GenerateRandomHard44/iterations:1       2564 ms         2564 ms            1
+BM_GenerateRandomHard50/iterations:1       2914 ms         2914 ms            1
+BM_GenerateRandomHard54/iterations:1       3243 ms         3243 ms            1
+BM_GenerateRandomHard60/iterations:1       3578 ms         3578 ms            1

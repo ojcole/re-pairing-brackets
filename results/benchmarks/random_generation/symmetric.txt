@@ -1,0 +1,12 @@
+------------------------------------------------------------------------------------
+Benchmark                                          Time             CPU   Iterations
+------------------------------------------------------------------------------------
+BM_GenerateRandomSymmetric20/iterations:1       8272 ms         8272 ms            1
+BM_GenerateRandomSymmetric25/iterations:1      10970 ms        10970 ms            1
+BM_GenerateRandomSymmetric30/iterations:1      13206 ms        13206 ms            1
+BM_GenerateRandomSymmetric35/iterations:1      15907 ms        15907 ms            1
+BM_GenerateRandomSymmetric40/iterations:1      18230 ms        18230 ms            1
+BM_GenerateRandomSymmetric45/iterations:1      20714 ms        20714 ms            1
+BM_GenerateRandomSymmetric50/iterations:1      22997 ms        22997 ms            1
+BM_GenerateRandomSymmetric55/iterations:1      25796 ms        25796 ms            1
+BM_GenerateRandomSymmetric60/iterations:1      28171 ms        28171 ms            1
