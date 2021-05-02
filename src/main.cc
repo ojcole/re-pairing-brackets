@@ -34,17 +34,20 @@
 #include "stats/results_output.h"
 
 int main() {
+  // Calculation of the average width found using the simple re-pairing strategy
+
   size_t total{};
   size_t count{};
   size_t iters{100000};
   size_t step{10000};
   size_t steps = iters / step;
+
   for (size_t i{}; i < steps; i++) {
     for (size_t j{}; j < step; j++) {
       auto word = generate::RandomHardWord(256);
-      auto sol = solve::SolveSimpleGreedy(word);
+      auto sol = solve::CalculateWordStrahler(word);
 
-      total += static_cast<size_t>(sol.GetWidth());
+      total += static_cast<size_t>(sol);
       count++;
     }
 

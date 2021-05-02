@@ -1,0 +1,9 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@//:copts.bzl", "COPTS")
+
+cc_binary(
+    name = "width3",
+    srcs = ["main.cc"],
+    copts = COPTS,
+    deps = ["@repairings//search:width_search"],
+)
