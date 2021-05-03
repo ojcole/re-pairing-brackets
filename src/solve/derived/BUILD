@@ -23,6 +23,7 @@ cc_library(
 
 cc_test(
     name = "free_moves_test",
+    size = "small",
     srcs = ["free_moves_test.cc"],
     deps = [
         ":derived_strategy",
@@ -34,6 +35,7 @@ cc_test(
 
 cc_test(
     name = "obvious_moves_test",
+    size = "small",
     srcs = ["obvious_moves_test.cc"],
     deps = [
         ":derived_strategy",
@@ -45,6 +47,7 @@ cc_test(
 
 cc_test(
     name = "derived_strategy_test",
+    size = "small",
     srcs = ["derived_strategy_test.cc"],
     deps = [
         ":derived_strategy",

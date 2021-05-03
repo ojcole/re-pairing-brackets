@@ -15,6 +15,7 @@ cc_library(
 
 cc_test(
     name = "minimise_width_test",
+    size = "small",
     srcs = ["minimise_width.cc"],
     deps = [
         ":minimise_width",

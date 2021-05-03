@@ -17,6 +17,7 @@ cc_library(
 
 cc_test(
     name = "solve_exhaustive_test",
+    size = "small",
     srcs = ["solve_exhaustive_test.cc"],
     deps = [
         "//generate:generate_all",

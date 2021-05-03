@@ -38,6 +38,7 @@ cc_library(
 
 cc_test(
     name = "hardness_test",
+    size = "small",
     srcs = ["hardness_test.cc"],
     deps = [
         ":compute_hardness",
@@ -51,6 +52,7 @@ cc_test(
 
 cc_test(
     name = "random_sample_width_test",
+    size = "small",
     srcs = ["random_sample_width_test.cc"],
     deps = [
         ":random_sample",

@@ -36,6 +36,7 @@ cc_library(
 
 cc_test(
     name = "solution_test",
+    size = "small",
     srcs = ["solution_test.cc"],
     deps = [
         ":solution",

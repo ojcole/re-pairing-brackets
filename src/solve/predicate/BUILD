@@ -14,6 +14,7 @@ cc_library(
 
 cc_test(
     name = "width_check_test",
+    size = "small",
     srcs = ["width_check_test.cc"],
     visibility = ["//visibility:public"],
     deps = [

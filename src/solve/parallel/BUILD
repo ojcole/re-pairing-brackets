@@ -22,6 +22,7 @@ cc_library(
 
 cc_test(
     name = "solve_parallel_test",
+    size = "small",
     srcs = ["solve_parallel_test.cc"],
     deps = [
         ":solve",

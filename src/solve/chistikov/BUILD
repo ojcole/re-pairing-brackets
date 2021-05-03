@@ -10,6 +10,7 @@ cc_library(
 
 cc_test(
     name = "solve_chistikov_test",
+    size = "small",
     srcs = ["solve_chistikov_test.cc"],
     deps = [
         ":solve_chistikov",

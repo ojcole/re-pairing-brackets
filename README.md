@@ -16,7 +16,7 @@ To run all of the tests of the system with some additional compilation flags on,
 bazel test //...:all --copt=-Ofast --copt=-std=c++2a
 ```
 
-This command will run all of the tests found in the source. The general structure of the tests is to sit alongside the source file they are testing with a `_test` suffix. For example, to test the `generate_all.h` interface, the test file `generate_all_test.cc` contains the correctness checks.
+This command will run all of the tests found in the source. The general structure of the tests is to sit alongside the source file they are testing with a `_test` suffix. For example, to test the `generate_all.h` interface, the test file `generate_all_test.cc` contains the correctness checks. While running these tests, depending on your system performance, there is a chance a test will timeout. In such cases, test can be rerun with the `--test_timeout=[num]` flag where `[num]` specifies the number of seconds the test should run for.
 
 ## Examples
 

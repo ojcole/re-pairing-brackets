@@ -10,6 +10,7 @@ cc_library(
 
 cc_test(
     name = "combine_solutions_test",
+    size = "small",
     srcs = ["combine_solutions_test.cc"],
     deps = [
         ":combine_solutions",

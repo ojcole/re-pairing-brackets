@@ -71,6 +71,7 @@ cc_library(
 
 cc_test(
     name = "generate_all_test",
+    size = "small",
     srcs = ["generate_all_test.cc"],
     deps = [
         ":generate_all",
@@ -85,6 +86,7 @@ cc_test(
 
 cc_test(
     name = "generate_next_test",
+    size = "small",
     srcs = ["generate_next_test.cc"],
     deps = [
         ":generate_all",
@@ -96,6 +98,7 @@ cc_test(
 
 cc_test(
     name = "generate_random_test",
+    size = "medium",
     srcs = ["generate_random_test.cc"],
     deps = [
         ":generate_random",
@@ -108,6 +111,7 @@ cc_test(
 
 cc_test(
     name = "generate_random_hard_test",
+    size = "small",
     srcs = ["generate_random_hard_test.cc"],
     deps = [
         ":generate_random",
@@ -120,6 +124,7 @@ cc_test(
 
 cc_test(
     name = "generate_xyz_test",
+    size = "small",
     srcs = ["generate_xyz_test.cc"],
     deps = [
         ":generate_xyz",
@@ -131,6 +136,7 @@ cc_test(
 
 cc_test(
     name = "generate_next_symmetric_test",
+    size = "small",
     srcs = ["generate_next_symmetric_test.cc"],
     deps = [
         ":generate_next_symmetric",

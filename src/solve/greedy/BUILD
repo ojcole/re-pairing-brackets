@@ -48,6 +48,7 @@ cc_library(
 
 cc_test(
     name = "calculate_strahler_test",
+    size = "medium",
     srcs = ["calculate_strahler_test.cc"],
     deps = [
         ":solve_greedy",
@@ -60,6 +61,7 @@ cc_test(
 
 cc_test(
     name = "solve_simple_greedy_test",
+    size = "small",
     srcs = ["solve_simple_greedy_test.cc"],
     deps = [
         ":solve_greedy",
@@ -72,6 +74,7 @@ cc_test(
 
 cc_test(
     name = "solve_greedy_test",
+    size = "small",
     srcs = ["solve_greedy_test.cc"],
     deps = [
         ":solve_greedy",

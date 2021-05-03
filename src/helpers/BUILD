@@ -48,6 +48,7 @@ cc_library(
 
 cc_test(
     name = "catalan_test",
+    size = "small",
     srcs = ["catalan_test.cc"],
     deps = [
         ":catalan",
@@ -58,6 +59,7 @@ cc_test(
 
 cc_test(
     name = "n_choose_k_test",
+    size = "small",
     srcs = ["n_choose_k_test.cc"],
     deps = [
         ":nchoosek",
@@ -68,6 +70,7 @@ cc_test(
 
 cc_test(
     name = "manipulators_test",
+    size = "small",
     srcs = ["manipulators_test.cc"],
     deps = [
         ":constants",
@@ -80,6 +83,7 @@ cc_test(
 
 cc_test(
     name = "verifiers_test",
+    size = "small",
     srcs = ["verifiers_test.cc"],
     deps = [
         ":verifiers",
@@ -91,6 +95,7 @@ cc_test(
 
 cc_test(
     name = "traversal_test",
+    size = "small",
     srcs = ["traversal_test.cc"],
     deps = [
         ":traversal",

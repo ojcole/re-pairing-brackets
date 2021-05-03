@@ -35,21 +35,9 @@ cc_binary(
     ],
 )
 
-cc_binary(
-    name = "manual_genned",
-    srcs = ["manual_genned.cc"],
-    copts = COPTS,
-    deps = [
-        "//generate:generate_next",
-        "//generate:generate_next_symmetric",
-        "//helpers:catalan",
-        "//helpers:nchoosek",
-        "//search:width_search",
-    ],
-)
-
 cc_test(
     name = "manual_search_test",
+    size = "small",
     srcs = ["manual_search_test.cc"],
     data = glob(["test_files/*"]),
     deps = [

@@ -13,6 +13,7 @@ cc_library(
 
 cc_test(
     name = "all_repairings_test",
+    size = "small",
     srcs = ["all_repairings_test.cc"],
     deps = [
         ":all_repairings",

@@ -15,6 +15,7 @@ cc_library(
 
 cc_test(
     name = "compute_parallel_test",
+    size = "small",
     srcs = ["compute_parallel_test.cc"],
     deps = [
         ":compute_parallel",
@@ -25,6 +26,7 @@ cc_test(
 
 cc_test(
     name = "reducers_test",
+    size = "small",
     srcs = ["reducers_test.cc"],
     deps = [
         ":reducers",
