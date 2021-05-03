@@ -10,13 +10,13 @@ As the software is written using Bazel as the build tool, for cloning and using 
 
 ## Software Tests
 
-To run all of the tests of the system with some additional compilation flags on, run the following command. These tests should take around 3 minutes to complete and should all pass. There is a minute chance that the tests fail due to statistical anomalies; however, this is vanishingly small.
+To run all of the tests of the system with some additional compilation flags on, run the following command. These tests should take around 3 minutes to complete and should all pass. There is a minute chance that the tests fail due to statistical anomalies; however, this is vanishingly small. One should run this command from within the `src` folder.
 
 ```bash
 bazel test //...:all --copt=-Ofast --copt=-std=c++2a
 ```
 
-This command will run all of the tests found in the source. The general structure of the tests is to sit alongside the source file they are testing with a `_test` suffix. For example, to test the `generate_all.h` interface, the test file `generate_all_test.cc` contains the correctness checks. While running these tests, depending on your system performance, there is a chance a test will timeout. In such cases, test can be rerun with the `--test_timeout=[num]` flag where `[num]` specifies the number of seconds the test should run for.
+This command will run all of the tests found in the source. The general structure of the tests is to sit alongside the source file they are testing with a `_test` suffix. For example, to test the `generate_all.h` interface, the test file `generate_all_test.cc` contains the correctness checks. While running these tests, depending on your system performance, there is a chance a test will timeout. In such cases, one can rerun the tests using the `--test_timeout=[num]` flag where `[num]` specifies the number of seconds after which the test should time out.
 
 ## Examples
 
