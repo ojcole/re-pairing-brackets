@@ -4,6 +4,26 @@ This software results from a project that continued the work of Dmitry Chistikov
 
 The library is written in C++, allowing the user to take advantage of C++ features in conjunction with the library.
 
+## Results
+
+Included in the `results` directory is the end product of experiments performed using the library.
+
+### Width 3
+
+This directory includes a single file containing all of the different width 3 words that have been found that are known to be minimal. By minimal, we mean that removing any pair from any of these words results in a width 2 word.
+
+### Width 4
+
+This directory includes all width 4 words that have been reduced to a minimal form of varying lengths. These files include `n` of 170, 174, 178, 182, and 186.
+
+### Benchmarks
+
+This directory holds the benchmarks that have been performed over different generation and solving strategies.
+
+### Summary.xlsx
+
+This Excel spreadsheet contains the results of sampling that has been performed over words of varying length.
+
 ## Bazel
 
 As the software is written using Bazel as the build tool, for cloning and using this repository, the user should install Bazel from [here](https://docs.bazel.build/versions/master/install.html). Bazel can be run from any directory that has a `WORKSPACE` file at its root.
